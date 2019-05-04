@@ -27,11 +27,10 @@ class Cerebral
         void populate_bracs();
         virtual ~Cerebral ();
         void execute();
-        void debug();
     private:
         std::vector<char> memory;
-        int data_ptr = 0;
-        int ip = 0;
+        unsigned int data_ptr = 0;
+        unsigned int ip = 0;
         std::map<int, int> bracs;
         std::string code = "";
 };

@@ -65,7 +65,7 @@ void Cerebral::input() {
 
 void Cerebral::populate_bracs() {
     std::stack<int> stk;
-    for(int i = 0; i < code.length(); i++) {
+    for(unsigned long int i = 0; i < code.length(); i++) {
         if (code[i] == '[') stk.push(i);
         else if (code[i] == ']') {
             bracs[stk.top()] = i;
@@ -103,12 +103,8 @@ void Cerebral::execute() {
                 jump_backward();
                 break;
             default:
-                std::cout << "Unknown: " << ip << std::endl;
+                ip++;
         }
     }
 }
 
-void Cerebral::debug() {
-    for(int i = 0; i < 50; i++) std::cout << ((int)memory[i]);
-    std::cout << std::endl;
-}
