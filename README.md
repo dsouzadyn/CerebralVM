@@ -23,3 +23,7 @@ $ ./cerebral demos/hello.bfk
 ```sh
 $ make clean
 ```
+
+### More Demos
+
+More demos can be found [here](http://www.hevanet.com/cristofd/brainfuck/).
